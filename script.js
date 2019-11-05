@@ -9,7 +9,7 @@ const createGrids = () => {
     for (let i =0; i < gridNum * gridNum; i++){
         let div = document.createElement("div");
         div.style.background = "#14145b";
-        div.style.border = "solid #f5f5dc 0.1px";
+        div.style.border = "solid #37474F 0.1px";
         
         gridContainer.appendChild(div);
     }
