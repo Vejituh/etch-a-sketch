@@ -2,6 +2,16 @@ const btnClear = document.querySelector(".clear");
 const container = document.querySelector(".container");
 const gridContainer = document.querySelector("#grids");
 let gridNum = 16;
+
+const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i =0; i < 6; i++){
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 const createGrids = () => {
     const gridContainerWidth = document.getElementById("grids").offsetWidth
     const divWidth = gridContainerWidth / gridNum;
@@ -19,8 +29,8 @@ const createGrids = () => {
     const divs = document.querySelectorAll( '#grids div');
     
     divs.forEach((div) => {
-        let hover = () => {
-            div.style.background = "#707019";
+        let hover = () => { 
+            div.style.background = getRandomColor();
         }
         div.addEventListener("mouseenter", hover);    
     });
@@ -34,5 +44,6 @@ const clearGrid = () => {
     createGrids();
 }
 
-
 btnClear.addEventListener("click", clearGrid);
+
+
