@@ -29,7 +29,7 @@ const createGrids = () => {
     const divs = document.querySelectorAll( '#grids div');
     
     divs.forEach((div) => {
-        let hover = () => {
+        let hover = () => { 
             div.style.background = getRandomColor();
         }
         div.addEventListener("mouseenter", hover);    
